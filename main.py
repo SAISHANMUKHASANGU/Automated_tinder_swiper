@@ -29,12 +29,12 @@ print(driver.title)
 
 time.sleep(2)
 email=driver.find_element(By.XPATH,value='//*[@id="email"]')
-email.send_keys("shanmukha sangu")
+email.send_keys("Your id")
 
 
 time.sleep(2)
 password=driver.find_element(By.XPATH,value='//*[@id="pass"]')
-password.send_keys("sangu nitin")
+password.send_keys("your password")
 
 final_login=driver.find_element(By.ID,value='loginbutton')
 final_login.click()
@@ -43,14 +43,12 @@ time.sleep(10)
 driver.switch_to.window(base_window)
 time.sleep(5)
 
-#Allow location
+
 allow_location_button = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
 allow_location_button.click()
 
-#Tinder free tier only allows 100 "Likes" per day. If you have a premium account, feel free to change to a while loop.
 for n in range(100):
 
-    #Add a 1 second delay between likes.
     time.sleep(1)
 
     try:
